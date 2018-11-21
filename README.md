@@ -2,4 +2,4 @@
 This repo consists of several mini machine learning projects related to [Udacity's Intro to Machine Learning](https://classroom.udacity.com/courses/ud120) free course. The projects are translated from Python 2 to Python 3.
 
 ## Projects
-1. **Machine Learning for Author ID** (Naive Bayes) [Jupyter Notebook](https://github.com/ksatola/ml-introduction/blob/master/01_NaiveBayes.ipynb) [HTML Preview](https://github.com/ksatola/ml-introduction/blob/master/01_NaiveBayes.html)
+1. **Machine Learning for Author ID** (Naive Bayes) [Jupyter Notebook](https://github.com/ksatola/ml-introduction/blob/master/01_NaiveBayes.ipynb) / [HTML Preview](https://github.com/ksatola/ksatola.github.io/blob/master/ml-introduction/01_NaiveBayes.html)
