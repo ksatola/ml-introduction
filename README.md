@@ -27,6 +27,9 @@ This repo consists of several mini machine learning projects related to [Udacity
 ![Simple Linear Regression (SLR)](/11_SimpleLinearRegression2.png)
 ![Simple Linear Regression (SLR)](/11_SimpleLinearRegression3.png)
 
+![Outliers Removal](/12_OutliersRemovalRegression1.png)
+![Outliers Removal](/12_OutliersRemovalRegression2.png)
+
 ### Clustering
 1. **K-Means Clustering** [HTML Preview](https://ksatola.github.io/ml-introduction/13_K-MeansClustering.html) / [Jupyter Notebook](https://github.com/ksatola/ml-introduction/blob/master/13_K-MeansClustering.ipynb)
 
