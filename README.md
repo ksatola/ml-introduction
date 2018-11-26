@@ -22,3 +22,11 @@ This repo consists of several mini machine learning projects related to [Udacity
 1. **Enron Dataset Investigation** [HTML Preview](https://ksatola.github.io/ml-introduction/10_EnronDataset.html) / [Jupyter Notebook](https://github.com/ksatola/ml-introduction/blob/master/10_EnronDataset.ipynb)
 2. **Simple Linear Regression (SLR)** [HTML Preview](https://ksatola.github.io/ml-introduction/11_SimpleLinearRegression.html) / [Jupyter Notebook](https://github.com/ksatola/ml-introduction/blob/master/11_SimpleLinearRegression.ipynb)
 3. **Outliers Removal** [HTML Preview](https://ksatola.github.io/ml-introduction/12_OutliersRemovalRegression.html) / [Jupyter Notebook](https://github.com/ksatola/ml-introduction/blob/master/12_OutliersRemovalRegression.ipynb)
+
+### Clustering
+1. **K-Means Clustering** [HTML Preview](https://ksatola.github.io/ml-introduction/13_K-MeansClustering.html) / [Jupyter Notebook](https://github.com/ksatola/ml-introduction/blob/master/13_K-MeansClustering.ipynb)
+
+![K-Means Clustering](/13_K-MeansClustering1a.png)
+![K-Means Clustering](/13_K-MeansClustering1b.png)
+![K-Means Clustering](/13_K-MeansClustering2a.png)
+![K-Means Clustering](/13_K-MeansClustering2b.png)
