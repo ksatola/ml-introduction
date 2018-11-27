@@ -17,6 +17,7 @@ This repo consists of several mini machine learning projects related to [Udacity
 1. **Naive Bayes (NB)** [HTML Preview](https://ksatola.github.io/ml-introduction/01_NaiveBayes.html) / [Jupyter Notebook](https://github.com/ksatola/ml-introduction/blob/master/01_NaiveBayes.ipynb)
 2. **Support Vector Machines (SVM)** [HTML Preview](https://ksatola.github.io/ml-introduction/03_SVM.html) / [Jupyter Notebook](https://github.com/ksatola/ml-introduction/blob/master/03_SVM.ipynb)
 3. **Decision Tree (DT)** [HTML Preview](https://ksatola.github.io/ml-introduction/05_DecisionTree.html) / [Jupyter Notebook](https://github.com/ksatola/ml-introduction/blob/master/05_DecisionTree.ipynb)
+4. **Enron Emails Text Data Preprocessing** [HTML Preview](https://ksatola.github.io/ml-introduction/14_EnronEmailsPreprocessing.html) / [Jupyter Notebook](https://github.com/ksatola/ml-introduction/blob/master/14_EnronEmailsPreprocessing.ipynb)
 
 ### Regression
 1. **Enron Dataset Investigation** [HTML Preview](https://ksatola.github.io/ml-introduction/10_EnronDataset.html) / [Jupyter Notebook](https://github.com/ksatola/ml-introduction/blob/master/10_EnronDataset.ipynb)
