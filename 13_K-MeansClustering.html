@@ -11775,8 +11775,8 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Enron-Bonuses-Prediction">Enron Bonuses Prediction<a class="anchor-link" href="#Enron-Bonuses-Prediction">&#182;</a></h1><p>From: <a href="https://github.com/ksatola">https://github.com/ksatola</a></p>
-<h2 id="Description">Description<a class="anchor-link" href="#Description">&#182;</a></h2><p>Deploy <strong>k-means clustering</strong> on the Enron financial features data, with 2 clusters specified as a parameter.</p>
+<h1 id="Enron-Bonuses-Feature-Scaling-and-Prediction">Enron Bonuses Feature Scaling and Prediction<a class="anchor-link" href="#Enron-Bonuses-Feature-Scaling-and-Prediction">&#182;</a></h1><p>From: <a href="https://github.com/ksatola">https://github.com/ksatola</a></p>
+<h2 id="Description">Description<a class="anchor-link" href="#Description">&#182;</a></h2><p>Deploy <strong>K-Means Clustering</strong> on the Enron financial features data, with 2 clusters specified as a parameter. There is also feature scaling section at the bottom.</p>
 <h2 id="Origin">Origin<a class="anchor-link" href="#Origin">&#182;</a></h2><p>This is Python 3 version of a mini-project from <a href="https://classroom.udacity.com/courses/ud120">Udacity's Intro to Machine Learning</a> free course.</p>
 <h2 id="Steps-to-Prepare">Steps to Prepare<a class="anchor-link" href="#Steps-to-Prepare">&#182;</a></h2><p>none</p>
 <h2 id="Additional-Information">Additional Information<a class="anchor-link" href="#Additional-Information">&#182;</a></h2><p>none</p>
@@ -12234,6 +12234,86 @@ below for instructions on how to do this.)</p>
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>477 1111258
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Feature Scaling </span>
+
+<span class="c1"># What would be the rescaled value of a &quot;salary&quot; feature </span>
+<span class="c1"># that had an original value of $200,000, and </span>
+<span class="c1"># an &quot;exercised_stock_options&quot; feature of $1 million?</span>
+
+<span class="c1"># Apply feature scaling to your k-means clustering code from the last lesson, </span>
+<span class="c1"># on the “salary” and “exercised_stock_options” features (use only these two features). </span>
+<span class="c1"># What would be the rescaled value of a &quot;salary&quot; feature that had an original value of $200,000, </span>
+<span class="c1"># and an &quot;exercised_stock_options&quot; feature of $1 million? (Be sure to represent these numbers as floats, not integers!)</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="k">import</span> <span class="n">MinMaxScaler</span>
+
+<span class="n">salary</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">ex_stock</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">users</span> <span class="ow">in</span> <span class="n">data_dict</span><span class="p">:</span>
+    <span class="n">val</span> <span class="o">=</span> <span class="n">data_dict</span><span class="p">[</span><span class="n">users</span><span class="p">][</span><span class="s2">&quot;salary&quot;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">val</span> <span class="o">==</span> <span class="s1">&#39;NaN&#39;</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="n">salary</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">val</span><span class="p">))</span>
+    <span class="n">val</span> <span class="o">=</span> <span class="n">data_dict</span><span class="p">[</span><span class="n">users</span><span class="p">][</span><span class="s2">&quot;exercised_stock_options&quot;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">val</span> <span class="o">==</span> <span class="s1">&#39;NaN&#39;</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="n">ex_stock</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">val</span><span class="p">))</span>
+    
+<span class="n">salary</span> <span class="o">=</span> <span class="p">[</span><span class="nb">min</span><span class="p">(</span><span class="n">salary</span><span class="p">),</span> <span class="mf">200000.0</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">salary</span><span class="p">)]</span>
+<span class="n">ex_stock</span> <span class="o">=</span> <span class="p">[</span><span class="nb">min</span><span class="p">(</span><span class="n">ex_stock</span><span class="p">),</span> <span class="mf">1000000.0</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">ex_stock</span><span class="p">)]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Salary: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">salary</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Exercised stock options: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ex_stock</span><span class="p">))</span>
+
+<span class="n">salary</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">e</span><span class="p">]</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">salary</span><span class="p">])</span>
+<span class="n">ex_stock</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">e</span><span class="p">]</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">ex_stock</span><span class="p">])</span>
+
+<span class="n">scaler_salary</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span>
+<span class="n">scaler_stock</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span>
+
+<span class="n">rescaled_salary</span> <span class="o">=</span> <span class="n">scaler_salary</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span>
+<span class="n">rescaled_stock</span> <span class="o">=</span> <span class="n">scaler_salary</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">ex_stock</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Rescaled salary: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rescaled_salary</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Rescaled exercised stock options: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rescaled_stock</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Salary: [477.0, 200000.0, 1111258.0]
+Exercised stock options: [17378.0, 1000000.0, 34348384.0]
+Rescaled salary: [[0.        ]
+ [0.17962407]
+ [1.        ]]
+Rescaled exercised stock options: [[0.      ]
+ [0.028622]
+ [1.      ]]
 </pre>
 </div>
 </div>
