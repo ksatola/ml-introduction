@@ -38,3 +38,6 @@ This repo consists of several mini machine learning projects related to [Udacity
 
 ![K-Means Clustering](/13_K-MeansClustering2a.png)
 ![K-Means Clustering](/13_K-MeansClustering2b.png)
+
+### PCA
+1. **Principal Components Analysis (PCA)** [HTML Preview](https://ksatola.github.io/ml-introduction/15_PCA.html) / [Jupyter Notebook](https://github.com/ksatola/ml-introduction/blob/master/15_PCA.ipynb)
